@@ -20,7 +20,7 @@ router.route('/add').post((req, res) => {
 
 router.route('/delete/:id').delete((req, res) => {
     Compras.findByIdAndRemove(req.params.id)
-        .then(compras =>  res.json('removed'))
+        .then(compras =>  res.json('item Removido'))
         .catch(err => res.status(400).json('Error: ' + err))
 });
 
